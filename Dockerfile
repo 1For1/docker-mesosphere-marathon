@@ -13,6 +13,7 @@ ADD http://downloads.mesosphere.io/marathon/marathon-0.6.1/marathon-0.6.1.tgz /t
 RUN mkdir -p /opt/marathon && tar xzf /tmp/marathon.tgz -C /opt/marathon --strip=1 && rm -f /tmp/marathon.tgz
 
 EXPOSE 8080
+
 WORKDIR /opt/marathon
 CMD ["--help"]
 ENTRYPOINT ["/opt/marathon/bin/start"]
